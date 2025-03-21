@@ -1,0 +1,73 @@
+﻿# === Unreal Engine ===
+
+# Engine-generated folders
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.target
+*.csproj
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.tlog
+*.log
+*.pdb
+*.idb
+*.ipch
+*.dll
+*.exe
+
+# Autosaves, Backups, Cooked Content
+Autosaves/
+Backup/
+Saved/Cooked/
+Saved/Logs/
+Saved/Config/WindowsEditor/
+
+# Compiled Python cache
+*.pyc
+*.pyo
+__pycache__/
+
+# === JetBrains Rider ===
+.idea/
+*.iws
+*.iml
+.idea_modules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+
+# === General OS Clutter ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# === Optional ===
+
+# Ignore crash reports
+*.dmp
+
+# Ignore macOS Spotlight files
+.AppleDouble
+.LSOverride
+
+# === Keep these folders (important!) ===
+!Source/
+!Content/
+!Config/
+!*.uproject

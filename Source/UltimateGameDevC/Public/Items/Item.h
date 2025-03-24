@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -12,15 +10,38 @@ class ULTIMATEGAMEDEVC_API AItem : public AActor
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	AItem();
 
+	virtual void Tick(float DeltaTime) override;
+	
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
+	float Amplitude = 0.25f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
+	float TimeConstant = 5.f;
+
+	UFUNCTION(BlueprintPure)
+	float TransformSin() const;
+
+	UFUNCTION(BlueprintPure)
+	float TransformCosin() const;
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess= true))
+	float RunningTime;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* ItemMesh;
+	
+	static void ExampleLogging();
+	void ExampleMoving(float DeltaTime);
 };
+
+template<typename T>
+T Avg (T A, T B)
+{
+	return (A + B) / 2;
+}
